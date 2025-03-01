@@ -11,4 +11,19 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {}
+function getHumanChoice() {
+  let humanChoice = prompt("Rock, Paper, or Scissors: ");
+  return humanChoice.toLowerCase();
+}
+
+function playRound(humanChoice, computerChoice) {
+  console.log(humanChoice);
+  console.log(computerChoice);
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+let humanScore = 0;
+let computerScore = 0;
+
+playRound(humanSelection, computerSelection);
