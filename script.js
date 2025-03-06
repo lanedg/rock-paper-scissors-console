@@ -46,6 +46,7 @@ Computer choice: ${computerChoice}`);
     ++humanScore;
   }
   updateCount();
+  checkWin();
 }
 
 function updateCount() {
@@ -53,24 +54,25 @@ function updateCount() {
   computerCounter.textContent = `Computer Score : ${computerScore}`;
 }
 
-function playGame(playRound) {
-  playRound();
-  playRound();
-  playRound();
-  playRound();
-  playRound();
-  if (humanScore === computerScore) {
-    console.log("Game over.\nIt's a draw......");
-  } else if (humanScore > computerScore) {
-    console.log("Game over.\nYour the winner!");
+function checkWin() {
+  if (humanScore >= 5) {
+    winText.textContent = `You win! Choose one to play again:`;
+    humanScore = 0;
+    computerScore = 0;
+  } else if (computerScore >= 5) {
+    winText.textContent = "You lost... Choose one to play again:";
+    humanScore = 0;
+    computerScore = 0;
   } else {
-    console.log("Game over.\nYou lose......");
+    winText.textContent = "";
   }
 }
 
 let humanScore = 0;
 let computerScore = 0;
+const gameText = document.querySelector("#game-state");
 const roundText = document.querySelector("#round-state");
+const winText = document.querySelector("#win-text");
 const rpsContainer = document.querySelector("#rps-container");
 const humanCounter = document.querySelector("#human-score");
 const computerCounter = document.querySelector("#computer-score");
