@@ -14,6 +14,11 @@ html {
   text-decoration: underline;
 }
 
+#subhead {
+  margin: 50px auto 30px;
+  text-align: center;
+}
+
 #rps-container {
   margin: auto;
   display: flex;
@@ -28,5 +33,22 @@ html {
   border-radius: 1em;
   font-size: 20px;
   font-weight: bold;
+  color: white;
+}
+
+#score-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 50px auto;
+}
+
+#score-container div {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(150, 147, 147);
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
   color: white;
 }
